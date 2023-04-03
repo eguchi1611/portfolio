@@ -1,3 +1,3 @@
 export default function IndexPage() {
-  return <div>Index Page</div>;
+  return <div className="text-4xl font-bold text-red-400">Index Page</div>;
 }
