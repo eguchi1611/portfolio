@@ -9,10 +9,14 @@ type Props = {
 
 export default function PostCard({ post }: Props) {
   return (
-    <a href="#" className="group flex items-center py-4">
+    <a
+      href={`https://zenn.dev${post.path}`}
+      className="group flex items-center py-4"
+      target="_blank"
+    >
       <Image
         alt="zenn logo"
-        src="/zenn/logo-only.svg"
+        src="/assets/zenn-logo.svg"
         width={24}
         height={24}
         className="mr-2"

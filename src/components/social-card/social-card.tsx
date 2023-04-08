@@ -8,14 +8,14 @@ const socials: SocialButtonProps[] = [
   {
     icon: <IconBrandTwitterFilled className="text-[#1DA1F2]" />,
     label: "Twitter",
-    href: "#twitter",
+    href: "https://twitter.com/kk79it",
   },
   {
     icon: <IconBrandGithubFilled className="text-[#24292f]" />,
     label: "GitHub",
-    href: "#github",
+    href: "https://github.com/kk79it/portfolio",
   },
-  { icon: <IconZenn />, label: "Zenn", href: "#test" },
+  { icon: <IconZenn />, label: "Zenn", href: "https://zenn.dev/kk79it" },
 ];
 
 export default function SocialCard() {
