@@ -12,17 +12,21 @@ const skills: SkillCardProps[] = [
       />
     ),
     label: "Java",
+    level: 5,
+    tags: ["Spigot", "Swing"],
   },
   {
     icon: (
       <Image
         alt="nodejs icon"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
         width={24}
         height={24}
       />
     ),
-    label: "Node.js",
+    label: "JavaScript",
+    level: 2.5,
+    tags: ["TypeScript", "React", "Node.js"],
   },
 ];
 
@@ -33,7 +37,12 @@ export default function SkillBoard() {
       <div>
         {skills.map((skill) => (
           <div key={skill.label} className="border-t first:border-t-0">
-            <SkillCard icon={skill.icon} label={skill.label} />
+            <SkillCard
+              icon={skill.icon}
+              label={skill.label}
+              level={skill.level}
+              tags={skill.tags}
+            />
           </div>
         ))}
       </div>
