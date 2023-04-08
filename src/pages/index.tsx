@@ -4,6 +4,7 @@ import RecentPosts from "@/components/recent-posts/recent-posts-parent";
 import SkillBoard from "@/components/skill-board/skill-parent";
 import { getBlogPosts } from "@/lib/blog-posts";
 import { GetStaticProps } from "next";
+import Head from "next/head";
 
 type Props = {
   blogPosts: BlogPost[];
@@ -12,6 +13,13 @@ type Props = {
 export default function IndexPage({ blogPosts }: Props) {
   return (
     <div className="mx-auto max-w-3xl md:flex md:pt-8">
+      <Head>
+        <title>Keita ITO</title>
+        <meta
+          name="description"
+          content="Keita ITOのポートフォリオです。趣味でプログラミングをしています。"
+        />
+      </Head>
       <div className="mt-8 px-4 md:w-80">
         <Profile />
       </div>
