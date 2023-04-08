@@ -1,4 +1,4 @@
-import SocialCard from "./social-card/social-card";
+import SocialCard from "./social-card/social-card-parent";
 import Link from "next/link";
 
 export default function Profile() {
