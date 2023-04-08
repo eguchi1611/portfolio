@@ -22,7 +22,10 @@ export default function SocialCard() {
   return (
     <div>
       {socials.map((social) => (
-        <div key={social.href} className="border-t first:border-t-0">
+        <div
+          key={social.href}
+          className="border-t border-neutral-200 first:border-t-0"
+        >
           <SocialButton
             href={social.href}
             icon={social.icon}
