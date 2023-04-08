@@ -19,7 +19,7 @@ export default function IndexPage({ blogPosts }: Props) {
         <div className="mt-8">
           <RecentPosts blogPosts={blogPosts} />
         </div>
-        <div className="mt-4">
+        <div className="mt-8">
           <SkillBoard />
         </div>
       </div>
