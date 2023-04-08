@@ -10,6 +10,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.13",
     "@tabler/icons-react": "^2.14.0",
     "@types/node": "18.15.11",
     "@types/react": "18.0.32",
