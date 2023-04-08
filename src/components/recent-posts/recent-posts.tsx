@@ -10,7 +10,7 @@ export default function RecentPosts({ blogPosts }: Props) {
     <>
       <div className="text-lg text-neutral-700">最近の投稿</div>
       <div>
-        {blogPosts.map((post) => (
+        {blogPosts.slice(0, 3).map((post) => (
           <div key={post.slug} className="border-t first:border-t-0">
             <PostCard post={post} />
           </div>
