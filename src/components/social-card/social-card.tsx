@@ -13,7 +13,7 @@ const socials: SocialButtonProps[] = [
   {
     icon: <IconBrandGithubFilled className="text-[#24292f]" />,
     label: "GitHub",
-    href: "https://github.com/kk79it/portfolio",
+    href: "https://github.com/kk79it",
   },
   { icon: <IconZenn />, label: "Zenn", href: "https://zenn.dev/kk79it" },
 ];
