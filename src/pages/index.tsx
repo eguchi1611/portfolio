@@ -10,11 +10,11 @@ type Props = {
 
 export default function IndexPage({ blogPosts }: Props) {
   return (
-    <div className="mx-auto max-w-3xl pt-16 md:flex">
-      <div className="w-80 px-4">
+    <div className="mx-auto max-w-3xl md:flex md:pt-8">
+      <div className="mt-8 px-4 md:w-80">
         <Profile />
       </div>
-      <div className="flex-1 px-4">
+      <div className="mt-8 flex-1 px-4">
         <RecentPosts blogPosts={blogPosts} />
       </div>
     </div>
