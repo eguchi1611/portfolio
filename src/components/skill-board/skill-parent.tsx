@@ -141,7 +141,7 @@ const skills: SkillCardProps[] = [
         height={24}
       />
     ),
-    label: "Amazon Web Services",
+    label: "AWS",
     level: 2.5,
     tags: ["Amplify", "Lightsail"],
   },

@@ -14,8 +14,8 @@ export type Props = {
 
 export default function SkillCard({ icon, label, level, tags }: Props) {
   return (
-    <div className="flex items-center py-3">
-      <div className="mr-4">{icon}</div>
+    <div className="flex items-center px-2 py-3">
+      <div className="mr-4 min-w-max">{icon}</div>
       <div className="flex-1">
         <div className="flex items-center">
           <div className="text-neutral-700">{label}</div>
@@ -29,11 +29,11 @@ export default function SkillCard({ icon, label, level, tags }: Props) {
             ))}
           </div>
         </div>
-        <ul className="flex">
+        <ul className="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <li
               key={tag}
-              className="mr-2 rounded bg-neutral-200 px-2 py-1 text-xs text-neutral-700 last:mr-0"
+              className="rounded bg-neutral-200 px-2 py-1 text-xs text-neutral-700"
             >
               {tag}
             </li>

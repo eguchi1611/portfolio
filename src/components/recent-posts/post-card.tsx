@@ -11,7 +11,7 @@ export default function PostCard({ post }: Props) {
   return (
     <a
       href={`https://zenn.dev${post.path}`}
-      className="group flex items-center py-4"
+      className="group flex items-center px-2 py-4"
       target="_blank"
     >
       <Image
