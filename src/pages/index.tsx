@@ -6,14 +6,17 @@ import SkillSheet from "@/components/skill-sheet/skill-sheet";
 import SocialMedia from "@/components/social-media/social-media";
 import Works from "@/components/works/works";
 import { getBlogPosts } from "@/lib/blog-posts";
+import { getText } from "@/lib/local-file";
 import { GetStaticProps } from "next";
 import Head from "next/head";
+import { join } from "path";
 
 type Props = {
   blogPosts: BlogPost[];
+  description: string;
 };
 
-export default function IndexPage({ blogPosts }: Props) {
+export default function IndexPage({ blogPosts, description }: Props) {
   return (
     <div className="mx-auto max-w-3xl md:flex md:pt-8">
       <Head>
@@ -23,21 +26,25 @@ export default function IndexPage({ blogPosts }: Props) {
           content="Keita ITOのポートフォリオです。趣味でプログラミングをしています。"
         />
       </Head>
-      <div className="mt-8 px-4 md:w-80">
-        <SiteTitle />
+      <div className="px-4 md:w-80">
+        <div className="mt-4">
+          <SiteTitle />
+        </div>
         <div className="mt-2">
-          <SiteDescription />
+          <SiteDescription description={description} />
         </div>
         <div className="mt-2">
           <SocialMedia />
         </div>
-        <div className="mt-2">
+        <div className="mt-4">
           <Works />
         </div>
       </div>
-      <div className="mt-8 flex-1 px-4">
-        <RecentPosts blogPosts={blogPosts} />
-        <div className="mt-8">
+      <div className="flex-1 px-4">
+        <div className="mt-4">
+          <RecentPosts blogPosts={blogPosts} />
+        </div>
+        <div className="mt-4">
           <SkillSheet />
         </div>
       </div>
@@ -47,9 +54,16 @@ export default function IndexPage({ blogPosts }: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const posts = await getBlogPosts();
+
+  const path = join(process.cwd(), "properties/description.json");
+  const descriptionText = await getText(path);
+
+  const description = JSON.parse(descriptionText);
+
   return {
     props: {
       blogPosts: posts.articles,
+      description: description.text,
     },
     revalidate: 10,
   };
