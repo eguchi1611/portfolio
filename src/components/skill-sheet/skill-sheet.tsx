@@ -1,4 +1,4 @@
-import SkillCard, { Props as SkillCardProps } from "./skill-card";
+import SkillCard, { Props as SkillCardProps } from "./skill-sheet-card";
 import Image from "next/image";
 
 const skills: SkillCardProps[] = [

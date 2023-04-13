@@ -1,9 +1,9 @@
 import { BlogPost } from "@/@types/blog-posts";
-import SocialCard from "@/components/media-card/social-card-parent";
-import RecentPosts from "@/components/recent-posts/recent-posts-parent";
+import RecentPosts from "@/components/recent-posts/recent-posts";
 import SiteDescription from "@/components/site-description";
 import SiteTitle from "@/components/site-title";
-import SkillBoard from "@/components/skill-sheet/skill-sheet-parent";
+import SkillBoard from "@/components/skill-sheet/skill-sheet";
+import SocialCard from "@/components/social-media/social-media";
 import Works from "@/components/works/works";
 import { getBlogPosts } from "@/lib/blog-posts";
 import { GetStaticProps } from "next";

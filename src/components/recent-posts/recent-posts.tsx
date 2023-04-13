@@ -1,4 +1,4 @@
-import PostCard from "./post-card";
+import PostCard from "./recent-post-card";
 import { BlogPost } from "@/@types/blog-posts";
 
 type Props = {

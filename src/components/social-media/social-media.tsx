@@ -1,4 +1,4 @@
-import SocialButton, { Props as SocialButtonProps } from "./social-button";
+import SocialButton, { Props as SocialButtonProps } from "./social-media-card";
 import {
   IconBrandGithubFilled,
   IconBrandTwitterFilled,
