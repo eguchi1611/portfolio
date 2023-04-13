@@ -7,7 +7,7 @@ type Props = {
   post: BlogPost;
 };
 
-export default function PostCard({ post }: Props) {
+export default function RecentPostCard({ post }: Props) {
   return (
     <a
       href={`https://zenn.dev${post.path}`}

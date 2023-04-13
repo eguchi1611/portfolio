@@ -1,12 +1,12 @@
 import { PropsWithChildren, ReactNode } from "react";
 
-export type Props = {
+type Props = {
   label: string;
   icon: ReactNode;
   href: string;
 };
 
-export default function SocialButton({
+export default function SocialMediaCard({
   label,
   icon,
   href,

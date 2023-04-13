@@ -1,4 +1,4 @@
-import PostCard from "./recent-post-card";
+import RecentPostCard from "./recent-post-card";
 import { BlogPost } from "@/@types/blog-posts";
 
 type Props = {
@@ -14,7 +14,7 @@ export default function RecentPosts({ blogPosts }: Props) {
       <div>
         {blogPosts.slice(0, 3).map((post) => (
           <div key={post.slug} className="border-t first:border-t-0">
-            <PostCard post={post} />
+            <RecentPostCard post={post} />
           </div>
         ))}
       </div>

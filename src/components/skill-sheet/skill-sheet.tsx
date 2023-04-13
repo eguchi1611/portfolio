@@ -1,7 +1,8 @@
-import SkillCard, { Props as SkillCardProps } from "./skill-sheet-card";
+import SkillCard from "./skill-card";
 import Image from "next/image";
+import { ComponentProps } from "react";
 
-const skills: SkillCardProps[] = [
+const skills: Array<ComponentProps<typeof SkillCard>> = [
   {
     icon: (
       <Image
@@ -27,6 +28,19 @@ const skills: SkillCardProps[] = [
     label: "React",
     level: 5,
     tags: ["Next.js", "Vite"],
+  },
+  {
+    icon: (
+      <Image
+        alt="vue icon"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+        width={24}
+        height={24}
+      />
+    ),
+    label: "Vue",
+    level: 2.5,
+    tags: ["Nuxt.js", "Vuetify"],
   },
   {
     icon: (
@@ -186,7 +200,7 @@ const skills: SkillCardProps[] = [
   },
 ];
 
-export default function SkillBoard() {
+export default function SkillSheet() {
   return (
     <div>
       <div className="text-lg font-bold tracking-wider text-neutral-700">

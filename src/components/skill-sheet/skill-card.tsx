@@ -5,7 +5,7 @@ import {
 } from "@tabler/icons-react";
 import { ReactNode } from "react";
 
-export type Props = {
+type Props = {
   icon: ReactNode;
   label: string;
   level: number;
