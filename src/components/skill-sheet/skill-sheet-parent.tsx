@@ -189,7 +189,9 @@ const skills: SkillCardProps[] = [
 export default function SkillBoard() {
   return (
     <div>
-      <div className="text-lg text-neutral-700">スキル</div>
+      <div className="text-lg font-bold tracking-wider text-neutral-700">
+        SKILL
+      </div>
       <div>
         {skills.map((skill) => (
           <div key={skill.label} className="border-t first:border-t-0">
