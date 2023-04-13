@@ -14,7 +14,7 @@ export type Props = {
 
 export default function SkillCard({ icon, label, level, tags }: Props) {
   return (
-    <div className="flex items-center px-2 py-3">
+    <div className="flex items-center p-3">
       <div className="mr-4 min-w-max">{icon}</div>
       <div className="flex-1">
         <div className="flex items-center">
