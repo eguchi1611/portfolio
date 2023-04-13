@@ -1,9 +1,10 @@
 import { BlogPost } from "@/@types/blog-posts";
-import SocialCard from "@/components/media-card/social-card-parent";
-import RecentPosts from "@/components/recent-posts/recent-posts-parent";
+import RecentPosts from "@/components/recent-posts/recent-posts";
 import SiteDescription from "@/components/site-description";
 import SiteTitle from "@/components/site-title";
-import SkillBoard from "@/components/skill-sheet/skill-sheet-parent";
+import SkillSheet from "@/components/skill-sheet/skill-sheet";
+import SocialMedia from "@/components/social-media/social-media";
+import Works from "@/components/works/works";
 import { getBlogPosts } from "@/lib/blog-posts";
 import { GetStaticProps } from "next";
 import Head from "next/head";
@@ -28,13 +29,16 @@ export default function IndexPage({ blogPosts }: Props) {
           <SiteDescription />
         </div>
         <div className="mt-2">
-          <SocialCard />
+          <SocialMedia />
+        </div>
+        <div className="mt-2">
+          <Works />
         </div>
       </div>
       <div className="mt-8 flex-1 px-4">
         <RecentPosts blogPosts={blogPosts} />
         <div className="mt-8">
-          <SkillBoard />
+          <SkillSheet />
         </div>
       </div>
     </div>

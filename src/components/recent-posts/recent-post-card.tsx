@@ -7,11 +7,11 @@ type Props = {
   post: BlogPost;
 };
 
-export default function PostCard({ post }: Props) {
+export default function RecentPostCard({ post }: Props) {
   return (
     <a
       href={`https://zenn.dev${post.path}`}
-      className="group flex items-center px-2 py-4"
+      className="group flex items-center p-3"
       target="_blank"
     >
       <Image
@@ -19,7 +19,7 @@ export default function PostCard({ post }: Props) {
         src="/assets/zenn-logo.svg"
         width={24}
         height={24}
-        className="mr-2"
+        className="mr-4"
       />
       <div>
         <div className="text-neutral-700 group-hover:underline">
