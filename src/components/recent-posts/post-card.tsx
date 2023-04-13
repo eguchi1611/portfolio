@@ -19,7 +19,7 @@ export default function PostCard({ post }: Props) {
         src="/assets/zenn-logo.svg"
         width={24}
         height={24}
-        className="mr-2"
+        className="mr-4"
       />
       <div>
         <div className="text-neutral-700 group-hover:underline">
