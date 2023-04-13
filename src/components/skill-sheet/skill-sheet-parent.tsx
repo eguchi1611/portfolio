@@ -188,7 +188,7 @@ const skills: SkillCardProps[] = [
 
 export default function SkillBoard() {
   return (
-    <>
+    <div>
       <div className="text-lg text-neutral-700">スキル</div>
       <div>
         {skills.map((skill) => (
@@ -202,6 +202,6 @@ export default function SkillBoard() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }

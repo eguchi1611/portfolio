@@ -7,7 +7,7 @@ type Props = {
 
 export default function RecentPosts({ blogPosts }: Props) {
   return (
-    <>
+    <div>
       <div className="text-lg text-neutral-700">最近の投稿</div>
       <div>
         {blogPosts.slice(0, 3).map((post) => (
@@ -16,6 +16,6 @@ export default function RecentPosts({ blogPosts }: Props) {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
