@@ -1,7 +1,7 @@
 import { BlogPost } from "@/@types/blog-posts";
 import Profile from "@/components/profile";
 import RecentPosts from "@/components/recent-posts/recent-posts-parent";
-import SkillBoard from "@/components/skill-board/skill-parent";
+import SkillBoard from "@/components/skill-sheet/skill-sheet-parent";
 import { getBlogPosts } from "@/lib/blog-posts";
 import { GetStaticProps } from "next";
 import Head from "next/head";
