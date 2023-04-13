@@ -58,7 +58,7 @@ const skills: SkillCardProps[] = [
     icon: (
       <Image
         alt="css icon"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
         width={24}
         height={24}
       />
