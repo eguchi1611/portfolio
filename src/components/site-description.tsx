@@ -5,7 +5,7 @@ type Props = {
 export default function SiteDescription({ description }: Props) {
   return (
     <div
-      className="text-neutral-700 whitespace-pre-line"
+      className="whitespace-pre-line text-neutral-700"
       dangerouslySetInnerHTML={{ __html: description }}
     ></div>
   );

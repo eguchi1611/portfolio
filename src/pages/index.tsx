@@ -6,10 +6,9 @@ import SkillSheet from "@/components/skill-sheet/skill-sheet";
 import SocialMedia from "@/components/social-media/social-media";
 import Works from "@/components/works/works";
 import { getBlogPosts } from "@/lib/blog-posts";
-import { getText } from "@/lib/local-file";
+import { getProperties } from "@/lib/properties";
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import { join } from "path";
 
 type Props = {
   blogPosts: BlogPost[];
@@ -55,15 +54,12 @@ export default function IndexPage({ blogPosts, description }: Props) {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const posts = await getBlogPosts();
 
-  const path = join(process.cwd(), "properties/description.json");
-  const descriptionText = await getText(path);
-
-  const description = JSON.parse(descriptionText);
+  const { description } = getProperties();
 
   return {
     props: {
       blogPosts: posts.articles,
-      description: description.text,
+      description: description,
     },
     revalidate: 10,
   };
