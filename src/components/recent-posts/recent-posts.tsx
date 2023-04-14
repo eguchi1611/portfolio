@@ -1,5 +1,5 @@
 import RecentPostCard from "./recent-post-card";
-import { BlogPost } from "@/@types/blog-posts";
+import { BlogPost } from "@/@types/blog-post";
 
 type Props = {
   blogPosts: BlogPost[];

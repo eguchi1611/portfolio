@@ -1,4 +1,4 @@
-import { BlogPost } from "@/@types/blog-posts";
+import { BlogPost } from "@/@types/blog-post";
 import axios from "axios";
 
 type APIResponse = {

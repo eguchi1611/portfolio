@@ -1,19 +1,19 @@
+import { WorkPostMetadata } from "@/@types/work-post";
 import { markdownToHtml } from "@/lib/markdown-to-html";
-import { getAllSlugs, getPostBySlug } from "@/lib/works-loader";
-import { IconHome } from "@tabler/icons-react";
+import { getAllSlugs, getPostBySlug } from "@/lib/work-posts";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 
 type Props = {
+  metadata: Partial<WorkPostMetadata>;
   html: string;
-  data: Record<string, any>;
 };
 
 type Params = {
   slug: string;
 };
 
-export default function WorkPage({ data, html }: Props) {
+export default function WorkPage({ metadata, html }: Props) {
   return (
     <div className="mx-auto max-w-3xl pt-4">
       <Link
@@ -33,10 +33,10 @@ export default function WorkPage({ data, html }: Props) {
 export const getStaticProps: GetStaticProps<Props, Params> = async ({
   params,
 }) => {
-  const { content, data } = getPostBySlug(params?.slug || "");
+  const { content, metadata } = getPostBySlug(params?.slug || "");
   const html = await markdownToHtml(content);
   return {
-    props: { data, html },
+    props: { metadata, html },
   };
 };
 

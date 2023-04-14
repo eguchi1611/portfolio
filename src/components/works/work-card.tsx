@@ -1,14 +1,16 @@
+import { WorkPost } from "@/@types/work-post";
 import { IconFile } from "@tabler/icons-react";
+import Link from "next/link";
 
-type Props = {
-  title: string;
-};
+type Props = WorkPost;
 
-export default function WorkCard({ title }: Props) {
+export default function WorkCard({ metadata, slug }: Props) {
   return (
-    <div className="group flex cursor-pointer p-3">
+    <Link href={`/works/${slug}`} className="group flex cursor-pointer p-3">
       <IconFile className="mr-4" />
-      <div className="text-neutral-700 group-hover:underline">{title}</div>
-    </div>
+      <div className="text-neutral-700 group-hover:underline">
+        {metadata.title}
+      </div>
+    </Link>
   );
 }

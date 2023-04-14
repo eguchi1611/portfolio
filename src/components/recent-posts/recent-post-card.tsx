@@ -1,4 +1,4 @@
-import { BlogPost } from "@/@types/blog-posts";
+import { BlogPost } from "@/@types/blog-post";
 import { IconClock, IconHeart } from "@tabler/icons-react";
 import { format } from "date-fns";
 import Image from "next/image";
