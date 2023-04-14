@@ -1,14 +1,14 @@
-import { skills } from "./data-skills";
+import { dataSkills } from "./data-skills";
 import SkillCard from "./skill-card";
 
-export default function SkillSheet() {
+export default function SkillList() {
   return (
     <div>
       <div className="text-lg font-bold tracking-wider text-neutral-700">
         SKILL
       </div>
       <div>
-        {skills.map((skill) => (
+        {dataSkills.map((skill) => (
           <div key={skill.label} className="border-t first:border-t-0">
             <SkillCard
               icon={skill.icon}

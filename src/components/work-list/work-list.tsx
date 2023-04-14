@@ -5,7 +5,7 @@ type Props = {
   works: WorkPost[];
 };
 
-export default function Works({ works }: Props) {
+export default function WorkList({ works }: Props) {
   return (
     <div>
       <div className="text-lg font-bold tracking-wider text-neutral-700">

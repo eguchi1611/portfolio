@@ -2,7 +2,7 @@ import SkillCard from "./skill-card";
 import Image from "next/image";
 import { ComponentProps } from "react";
 
-export const skills: Array<ComponentProps<typeof SkillCard>> = [
+export const dataSkills: Array<ComponentProps<typeof SkillCard>> = [
   {
     icon: (
       <Image

@@ -5,7 +5,7 @@ type Props = {
   blogPosts: BlogPost[];
 };
 
-export default function RecentPosts({ blogPosts }: Props) {
+export default function RecentPostList({ blogPosts }: Props) {
   return (
     <div>
       <div className="text-lg font-bold tracking-wider text-neutral-700">

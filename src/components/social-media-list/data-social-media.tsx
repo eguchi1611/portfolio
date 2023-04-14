@@ -5,7 +5,7 @@ import {
 } from "@tabler/icons-react";
 import { ComponentProps } from "react";
 
-export const socialMediaList: Array<ComponentProps<typeof SocialMediaCard>> = [
+export const dataSocialMedia: Array<ComponentProps<typeof SocialMediaCard>> = [
   {
     icon: <IconBrandTwitterFilled className="text-[#1DA1F2]" />,
     label: "Twitter",

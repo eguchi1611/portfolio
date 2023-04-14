@@ -1,11 +1,11 @@
 import { BlogPost } from "@/@types/blog-post";
 import { WorkPost } from "@/@types/work-post";
-import RecentPosts from "@/components/recent-posts/recent-posts";
+import RecentPostList from "@/components/recent-post-list/recent-post-list";
 import SiteDescription from "@/components/site-description";
 import SiteTitle from "@/components/site-title";
-import SkillSheet from "@/components/skill-sheet/skill-sheet";
-import SocialMedia from "@/components/social-media/social-media";
-import Works from "@/components/works/works";
+import SkillList from "@/components/skill-list/skill-list";
+import SocialMediaList from "@/components/social-media-list/social-media-list";
+import WorkList from "@/components/work-list/work-list";
 import { getBlogPosts } from "@/lib/blog-posts";
 import { getProperties } from "@/lib/properties";
 import { getAllPosts } from "@/lib/work-posts";
@@ -36,18 +36,18 @@ export default function IndexPage({ blogPosts, description, works }: Props) {
           <SiteDescription description={description} />
         </div>
         <div className="mt-2">
-          <SocialMedia />
+          <SocialMediaList />
         </div>
         <div className="mt-4">
-          <Works works={works} />
+          <WorkList works={works} />
         </div>
       </div>
       <div className="flex-1 px-4">
         <div className="mt-4">
-          <RecentPosts blogPosts={blogPosts} />
+          <RecentPostList blogPosts={blogPosts} />
         </div>
         <div className="mt-4">
-          <SkillSheet />
+          <SkillList />
         </div>
       </div>
     </div>
