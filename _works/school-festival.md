@@ -1,5 +1,5 @@
 ---
-title: "ys-fes-2022"
+title: "文化祭 2022"
 ---
 
 # test markdown
