@@ -4,12 +4,12 @@ import { WorkPost } from "@/@types/work-post";
 
 export const works: WorkPost[] = [
   {
-    slug: "school-festival",
+    url: "#",
     title: "文化祭ウェブサイト",
     thumbnail: ImageSchoolFestival,
   },
   {
-    slug: "portfolio",
+    url: "#",
     title: "ポートフォリオ",
     thumbnail: ImagePortfolio,
   },

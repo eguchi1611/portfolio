@@ -9,7 +9,7 @@ export default function WorkList() {
       </div>
       <div className="mt-2">
         {works.map((work) => (
-          <div key={work.slug} className="mt-4 first:mt-0">
+          <div key={work.url} className="mt-4 first:mt-0">
             <WorkCard {...work} />
           </div>
         ))}

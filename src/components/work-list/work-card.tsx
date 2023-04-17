@@ -5,10 +5,11 @@ import Link from "next/link";
 
 type Props = WorkPost;
 
-export default function WorkCard({ thumbnail, title, slug }: Props) {
+export default function WorkCard({ thumbnail, title, url }: Props) {
   return (
-    <Link
-      href={`/works/${slug}`}
+    <a
+      href={url}
+      target="_blank"
       className="group block overflow-hidden rounded-lg border"
     >
       <div className="flex border-b p-3">
@@ -16,6 +17,6 @@ export default function WorkCard({ thumbnail, title, slug }: Props) {
         <div className="text-neutral-700 group-hover:underline">{title}</div>
       </div>
       <Image alt="thumbnail" src={thumbnail} className="" />
-    </Link>
+    </a>
   );
 }
