@@ -1,19 +1,21 @@
-import { BlogPost } from "@/@types/blog-posts";
-import RecentPosts from "@/components/recent-posts/recent-posts";
+import { BlogPost } from "@/@types/blog-post";
+import RecentPostList from "@/components/recent-post-list/recent-post-list";
 import SiteDescription from "@/components/site-description";
 import SiteTitle from "@/components/site-title";
-import SkillSheet from "@/components/skill-sheet/skill-sheet";
-import SocialMedia from "@/components/social-media/social-media";
-import Works from "@/components/works/works";
+import SkillList from "@/components/skill-list/skill-list";
+import SocialMediaList from "@/components/social-media-list/social-media-list";
+import WorkList from "@/components/work-list/work-list";
 import { getBlogPosts } from "@/lib/blog-posts";
+import { getProperties } from "@/lib/properties";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 
 type Props = {
   blogPosts: BlogPost[];
+  description: string;
 };
 
-export default function IndexPage({ blogPosts }: Props) {
+export default function IndexPage({ blogPosts, description }: Props) {
   return (
     <div className="mx-auto max-w-3xl md:flex md:pt-8">
       <Head>
@@ -23,22 +25,26 @@ export default function IndexPage({ blogPosts }: Props) {
           content="Keita ITOのポートフォリオです。趣味でプログラミングをしています。"
         />
       </Head>
-      <div className="mt-8 px-4 md:w-80">
-        <SiteTitle />
-        <div className="mt-2">
-          <SiteDescription />
+      <div className="px-4 md:w-80">
+        <div className="mt-4">
+          <SiteTitle />
         </div>
         <div className="mt-2">
-          <SocialMedia />
+          <SiteDescription description={description} />
         </div>
         <div className="mt-2">
-          <Works />
+          <SocialMediaList />
+        </div>
+        <div className="mt-4">
+          <WorkList />
         </div>
       </div>
-      <div className="mt-8 flex-1 px-4">
-        <RecentPosts blogPosts={blogPosts} />
-        <div className="mt-8">
-          <SkillSheet />
+      <div className="flex-1 px-4">
+        <div className="mt-4">
+          <RecentPostList blogPosts={blogPosts} />
+        </div>
+        <div className="mt-4">
+          <SkillList />
         </div>
       </div>
     </div>
@@ -47,9 +53,13 @@ export default function IndexPage({ blogPosts }: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const posts = await getBlogPosts();
+
+  const { description } = getProperties();
+
   return {
     props: {
       blogPosts: posts.articles,
+      description: description,
     },
     revalidate: 10,
   };

@@ -1,8 +1,8 @@
-import SkillCard from "./skill-card";
+import SkillCard from "@/components/skill-list/skill-card";
 import Image from "next/image";
 import { ComponentProps } from "react";
 
-const skills: Array<ComponentProps<typeof SkillCard>> = [
+export const skills: Array<ComponentProps<typeof SkillCard>> = [
   {
     icon: (
       <Image
@@ -199,25 +199,3 @@ const skills: Array<ComponentProps<typeof SkillCard>> = [
     tags: ["Ubuntu"],
   },
 ];
-
-export default function SkillSheet() {
-  return (
-    <div>
-      <div className="text-lg font-bold tracking-wider text-neutral-700">
-        SKILL
-      </div>
-      <div>
-        {skills.map((skill) => (
-          <div key={skill.label} className="border-t first:border-t-0">
-            <SkillCard
-              icon={skill.icon}
-              label={skill.label}
-              level={skill.level}
-              tags={skill.tags}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}

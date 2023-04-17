@@ -19,7 +19,7 @@ export default function SkillCard({ icon, label, level, tags }: Props) {
       <div className="flex-1">
         <div className="flex items-center">
           <div className="text-neutral-700 group-hover:underline">{label}</div>
-          <div className="ml-auto flex rounded p-1 text-xs text-yellow-300">
+          <div className="ml-auto flex text-yellow-300">
             {[...Array(Math.floor(level))].map((_value, index) => (
               <IconStarFilled key={index} size={20} />
             ))}

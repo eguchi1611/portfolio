@@ -1,11 +1,11 @@
-import SocialMediaCard from "./social-media-card";
+import SocialMediaCard from "@/components/social-media-list/social-media-card";
 import {
   IconBrandGithubFilled,
   IconBrandTwitterFilled,
 } from "@tabler/icons-react";
 import { ComponentProps } from "react";
 
-const socials: Array<ComponentProps<typeof SocialMediaCard>> = [
+export const snslist: Array<ComponentProps<typeof SocialMediaCard>> = [
   {
     icon: <IconBrandTwitterFilled className="text-[#1DA1F2]" />,
     label: "Twitter",
@@ -18,22 +18,6 @@ const socials: Array<ComponentProps<typeof SocialMediaCard>> = [
   },
   { icon: <IconZenn />, label: "Zenn", href: "https://zenn.dev/kk79it" },
 ];
-
-export default function SocialMedia() {
-  return (
-    <div>
-      {socials.map((social) => (
-        <div key={social.href} className="border-t first:border-t-0">
-          <SocialMediaCard
-            href={social.href}
-            icon={social.icon}
-            label={social.label}
-          />
-        </div>
-      ))}
-    </div>
-  );
-}
 
 function IconZenn() {
   return (
