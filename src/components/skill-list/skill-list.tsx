@@ -1,5 +1,5 @@
-import { dataSkills } from "./data-skills";
 import SkillCard from "./skill-card";
+import { skills } from "@/properties/skills";
 
 export default function SkillList() {
   return (
@@ -8,7 +8,7 @@ export default function SkillList() {
         SKILL
       </div>
       <div>
-        {dataSkills.map((skill) => (
+        {skills.map((skill) => (
           <div key={skill.label} className="border-t first:border-t-0">
             <SkillCard
               icon={skill.icon}

@@ -1,5 +1,4 @@
 import { BlogPost } from "@/@types/blog-post";
-import { WorkPost } from "@/@types/work-post";
 import RecentPostList from "@/components/recent-post-list/recent-post-list";
 import SiteDescription from "@/components/site-description";
 import SiteTitle from "@/components/site-title";
@@ -8,17 +7,15 @@ import SocialMediaList from "@/components/social-media-list/social-media-list";
 import WorkList from "@/components/work-list/work-list";
 import { getBlogPosts } from "@/lib/blog-posts";
 import { getProperties } from "@/lib/properties";
-import { getAllPosts } from "@/lib/work-posts";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 
 type Props = {
   blogPosts: BlogPost[];
   description: string;
-  works: WorkPost[];
 };
 
-export default function IndexPage({ blogPosts, description, works }: Props) {
+export default function IndexPage({ blogPosts, description }: Props) {
   return (
     <div className="mx-auto max-w-3xl md:flex md:pt-8">
       <Head>
@@ -39,7 +36,7 @@ export default function IndexPage({ blogPosts, description, works }: Props) {
           <SocialMediaList />
         </div>
         <div className="mt-4">
-          <WorkList works={works} />
+          <WorkList />
         </div>
       </div>
       <div className="flex-1 px-4">
@@ -59,13 +56,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   const { description } = getProperties();
 
-  const workPosts = getAllPosts();
-
   return {
     props: {
       blogPosts: posts.articles,
       description: description,
-      works: workPosts,
     },
     revalidate: 10,
   };

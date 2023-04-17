@@ -1,19 +1,15 @@
 import WorkCard from "./work-card";
-import { WorkPost } from "@/@types/work-post";
+import { works } from "@/properties/works";
 
-type Props = {
-  works: WorkPost[];
-};
-
-export default function WorkList({ works }: Props) {
+export default function WorkList() {
   return (
     <div>
       <div className="text-lg font-bold tracking-wider text-neutral-700">
         WORKS
       </div>
-      <div>
+      <div className="mt-2">
         {works.map((work) => (
-          <div key={work.slug} className="border-t first:border-t-0">
+          <div key={work.slug} className="mt-4 first:mt-0">
             <WorkCard {...work} />
           </div>
         ))}

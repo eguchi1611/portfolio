@@ -1,10 +1,10 @@
-import { dataSocialMedia } from "./data-social-media";
 import SocialMediaCard from "./social-media-card";
+import { snslist } from "@/properties/snslist";
 
 export default function SocialMediaList() {
   return (
     <div>
-      {dataSocialMedia.map((social) => (
+      {snslist.map((social) => (
         <div key={social.href} className="border-t first:border-t-0">
           <SocialMediaCard
             href={social.href}

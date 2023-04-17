@@ -1,9 +1,7 @@
-export type WorkPost = {
-  content: string;
-  metadata: Partial<WorkPostMetadata>;
-  slug: string;
-};
+import { StaticImageData } from "next/image";
 
-export type WorkPostMetadata = {
+export type WorkPost = {
   title: string;
+  slug: string;
+  thumbnail: StaticImageData;
 };

@@ -1,11 +1,11 @@
-import SocialMediaCard from "./social-media-card";
+import SocialMediaCard from "@/components/social-media-list/social-media-card";
 import {
   IconBrandGithubFilled,
   IconBrandTwitterFilled,
 } from "@tabler/icons-react";
 import { ComponentProps } from "react";
 
-export const dataSocialMedia: Array<ComponentProps<typeof SocialMediaCard>> = [
+export const snslist: Array<ComponentProps<typeof SocialMediaCard>> = [
   {
     icon: <IconBrandTwitterFilled className="text-[#1DA1F2]" />,
     label: "Twitter",
