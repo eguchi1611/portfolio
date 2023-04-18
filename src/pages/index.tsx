@@ -4,7 +4,7 @@ import SiteDescription from "@/components/site-description";
 import SiteTitle from "@/components/site-title";
 import SkillList from "@/components/skills/skill-list";
 import SocialMediaList from "@/components/sns-list/social-media-list";
-import WorkList from "@/components/work-list/work-list";
+import WorkList from "@/components/works/work-list";
 import { getBlogPosts } from "@/lib/blog-posts";
 import { GetStaticProps } from "next";
 import Head from "next/head";
