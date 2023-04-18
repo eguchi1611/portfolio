@@ -1,5 +1,5 @@
 import WorkCard from "./work-card";
-import { works } from "@/properties/works";
+import propertiesJson from "@/properties.json";
 
 export default function WorkList() {
   return (
@@ -7,9 +7,9 @@ export default function WorkList() {
       <div className="text-lg font-bold tracking-wider text-neutral-700">
         WORKS
       </div>
-      <div className="mt-2">
-        {works.map((work) => (
-          <div key={work.url} className="mt-4 first:mt-0">
+      <div className="mt-2 grid gap-4 sm:grid-cols-2 md:grid-cols-1">
+        {propertiesJson.works.map((work) => (
+          <div key={work.url}>
             <WorkCard {...work} />
           </div>
         ))}

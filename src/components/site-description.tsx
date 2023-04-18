@@ -1,12 +1,9 @@
-type Props = {
-  description: string;
-};
+import propertiesJson from "@/properties.json";
 
-export default function SiteDescription({ description }: Props) {
+export default function SiteDescription() {
   return (
-    <div
-      className="whitespace-pre-line text-neutral-700"
-      dangerouslySetInnerHTML={{ __html: description }}
-    ></div>
+    <div className="whitespace-pre-line text-neutral-700">
+      {propertiesJson.profile.description}
+    </div>
   );
 }

@@ -1,5 +1,5 @@
 import SkillCard from "./skill-card";
-import { skills } from "@/properties/skills";
+import propertiesJson from "@/properties.json";
 
 export default function SkillList() {
   return (
@@ -8,7 +8,7 @@ export default function SkillList() {
         SKILL
       </div>
       <div>
-        {skills.map((skill) => (
+        {propertiesJson.skills.map((skill) => (
           <div key={skill.label} className="border-t first:border-t-0">
             <SkillCard
               icon={skill.icon}

@@ -2,20 +2,18 @@ import { BlogPost } from "@/@types/blog-post";
 import RecentPostList from "@/components/recent-post-list/recent-post-list";
 import SiteDescription from "@/components/site-description";
 import SiteTitle from "@/components/site-title";
-import SkillList from "@/components/skill-list/skill-list";
-import SocialMediaList from "@/components/social-media-list/social-media-list";
-import WorkList from "@/components/work-list/work-list";
+import SkillList from "@/components/skills/skill-list";
+import SocialMediaList from "@/components/sns-list/social-media-list";
+import WorkList from "@/components/works/work-list";
 import { getBlogPosts } from "@/lib/blog-posts";
-import { getProperties } from "@/lib/properties";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 
 type Props = {
   blogPosts: BlogPost[];
-  description: string;
 };
 
-export default function IndexPage({ blogPosts, description }: Props) {
+export default function IndexPage({ blogPosts }: Props) {
   return (
     <div className="mx-auto max-w-3xl md:flex md:pt-8">
       <Head>
@@ -30,7 +28,7 @@ export default function IndexPage({ blogPosts, description }: Props) {
           <SiteTitle />
         </div>
         <div className="mt-2">
-          <SiteDescription description={description} />
+          <SiteDescription />
         </div>
         <div className="mt-2">
           <SocialMediaList />
@@ -54,12 +52,9 @@ export default function IndexPage({ blogPosts, description }: Props) {
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const posts = await getBlogPosts();
 
-  const { description } = getProperties();
-
   return {
     props: {
       blogPosts: posts.articles,
-      description: description,
     },
     revalidate: 10,
   };
