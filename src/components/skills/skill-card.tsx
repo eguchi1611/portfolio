@@ -3,10 +3,11 @@ import {
   IconStarFilled,
   IconStarHalfFilled,
 } from "@tabler/icons-react";
+import Image from "next/image";
 import { ReactNode } from "react";
 
 type Props = {
-  icon: ReactNode;
+  icon: string;
   label: string;
   level: number;
   tags: string[];
@@ -14,11 +15,18 @@ type Props = {
 
 export default function SkillCard({ icon, label, level, tags }: Props) {
   return (
-    <div className="group flex cursor-pointer items-center p-3">
-      <div className="mr-4 min-w-max">{icon}</div>
+    <div className="flex items-center p-3">
+      <div className="mr-4 min-w-max">
+        <Image
+          alt={label.toLowerCase() + " icon"}
+          src={icon}
+          width={24}
+          height={24}
+        />
+      </div>
       <div className="flex-1">
         <div className="flex items-center">
-          <div className="text-neutral-700 group-hover:underline">{label}</div>
+          <div className="text-neutral-700">{label}</div>
           <div className="ml-auto flex text-yellow-300">
             {[...Array(Math.floor(level))].map((_value, index) => (
               <IconStarFilled key={index} size={20} />

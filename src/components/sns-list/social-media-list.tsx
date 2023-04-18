@@ -1,10 +1,10 @@
 import SocialMediaCard from "./social-media-card";
-import { snslist } from "@/properties/snslist";
+import propertiesJson from "@/properties.json";
 
 export default function SocialMediaList() {
   return (
     <div>
-      {snslist.map((social) => (
+      {propertiesJson.snslist.map((social) => (
         <div key={social.href} className="border-t first:border-t-0">
           <SocialMediaCard
             href={social.href}
