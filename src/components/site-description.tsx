@@ -1,9 +1,9 @@
-import propertiesJson from "@/properties.json";
+import { properties } from "@/lib/properties";
 
 export default function SiteDescription() {
   return (
     <div className="whitespace-pre-line text-neutral-700">
-      {propertiesJson.profile.description}
+      {properties.profile.description}
     </div>
   );
 }
