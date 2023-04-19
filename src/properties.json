@@ -1,5 +1,9 @@
 {
+  "head": {
+    "title": "EGUCHI.ME"
+  },
   "profile": {
+    "title": "EGUCHI.ME",
     "description": "趣味でプログラミングしています\nお気軽にお声掛けください"
   },
   "skills": [
