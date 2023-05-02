@@ -19,10 +19,25 @@ export default function IndexPage({ blogPosts }: Props) {
     <div className="mx-auto max-w-3xl md:flex md:pt-8">
       <Head>
         <title>{properties.head.title}</title>
-        <meta
-          name="description"
-          content="Keita ITOのポートフォリオです。趣味でプログラミングをしています。"
+        <meta name="description" content={properties.head.description} />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
         />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <div className="px-4 md:w-80">
         <div className="mt-4">
