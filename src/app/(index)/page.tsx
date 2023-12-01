@@ -4,7 +4,7 @@ export default function IndexPage() {
   return (
     <div>
       <Image
-        alt="ロゴ"
+        alt="eguchi.cc"
         src="/logo.svg"
         width={257.28}
         height={56.704}
