@@ -12,7 +12,12 @@ export function getPostBySlug(slug: string) {
 
   const meta: Metadata = {
     title: data.title || "No title",
-    date: data.date ? format(new Date(data.date), "M月d日") : "No date",
+    createdAt: data.createdAt
+      ? format(new Date(data.createdAt), "y年M月d日")
+      : "No date",
+    updatedAt: data.updatedAt
+      ? format(new Date(data.updatedAt), "y年M月d日")
+      : "No date",
   };
 
   return { content, meta, slug };
@@ -20,7 +25,8 @@ export function getPostBySlug(slug: string) {
 
 type Metadata = {
   title: string;
-  date: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
 export function getPostSlugs() {

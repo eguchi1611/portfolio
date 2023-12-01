@@ -1,15 +1,9 @@
-import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+};
 
 export default function IndexPage() {
-  return (
-    <div>
-      <Image
-        alt="eguchi.cc"
-        src="/logo.svg"
-        width={257.28}
-        height={56.704}
-        className="h-24 w-auto"
-      />
-    </div>
-  );
+  return <div>main content</div>;
 }

@@ -1,6 +1,7 @@
 ---
-title: "tutorial-ポスト copy"
-date: "2023-11-02"
+title: "tutorial-ポスト"
+createdAt: "2023-11-02"
+updatedAt: "2023-11-17"
 ---
 
 ## What is this?
