@@ -2,6 +2,7 @@
 title: "tutorial-ポスト"
 createdAt: "2023-11-02"
 updatedAt: "2023-11-17"
+thumbnail: https://assets.eguchi.cc/IMG_6698.JPG
 ---
 
 ## What is this?

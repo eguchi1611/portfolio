@@ -2,6 +2,7 @@
 title: "tutorial-ポスト"
 createdAt: "2023-11-02"
 updatedAt: "2023-11-17"
+thumbnail: https://assets.eguchi.cc/IMG_6698.JPG
 ---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

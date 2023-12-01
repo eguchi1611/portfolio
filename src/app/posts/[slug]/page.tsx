@@ -1,8 +1,10 @@
 import { getPostBySlug, getPostSlugs } from "@/lib/blogPost";
+import Image from "next/image";
 import Markdown from "react-markdown";
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const { content, meta } = getPostBySlug(params.slug);
+
   return (
     <div>
       <div className="py-8 text-center">
@@ -11,7 +13,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </h1>
         <div>{meta.createdAt}</div>
       </div>
-      <div className="prose prose-slate max-w-none dark:prose-invert">
+      {meta.thumbnail && (
+        <div className="relative aspect-[4/3] overflow-hidden rounded">
+          <Image alt="" src={meta.thumbnail} sizes="100vw" fill />
+        </div>
+      )}
+      <div className="prose prose-slate mt-4 max-w-none dark:prose-invert">
         <Markdown>{content}</Markdown>
       </div>
     </div>

@@ -18,6 +18,7 @@ export function getPostBySlug(slug: string) {
     updatedAt: data.updatedAt
       ? format(new Date(data.updatedAt), "y年M月d日")
       : "No date",
+    thumbnail: data.thumbnail,
   };
 
   return { content, meta, slug };
@@ -27,6 +28,7 @@ type Metadata = {
   title: string;
   createdAt: string;
   updatedAt: string;
+  thumbnail?: string;
 };
 
 export function getPostSlugs() {
