@@ -1,20 +1,26 @@
+"use client";
+
 import {
-  IconArticle,
   IconGraph,
   IconHome,
+  IconPencil,
   IconTable,
 } from "@tabler/icons-react";
+import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const options = [
   { label: "Home", href: "/", Icon: IconHome },
   { label: "Works", href: "/works", Icon: IconTable },
-  { label: "Blog", href: "/posts", Icon: IconArticle },
+  { label: "Blog", href: "/posts", Icon: IconPencil },
   { label: "About", href: "/about", Icon: IconGraph },
 ];
 
 export default function Sidebar() {
+  const pathname = usePathname();
+
   return (
     <div className="w-48 space-y-2 pt-8">
       <Image
@@ -27,8 +33,17 @@ export default function Sidebar() {
       />
       <div className="divide-y">
         {options.map(({ label, href, Icon }) => (
-          <Link key={label} href={href} className="flex items-center p-3">
-            <Icon className="mr-2" />
+          <Link
+            key={label}
+            href={href}
+            className="flex items-center p-3 hover:text-teal-500"
+          >
+            <Icon
+              className={clsx("mr-2", {
+                "text-teal-500":
+                  href !== "/" ? pathname.startsWith(href) : pathname === "/",
+              })}
+            />
             {label}
           </Link>
         ))}
